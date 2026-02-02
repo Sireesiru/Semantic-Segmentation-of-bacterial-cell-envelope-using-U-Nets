@@ -1,5 +1,3 @@
-# Dual Label Semantic Segmentation for Biological Nanostructures using U-Nets
-
 # Dual-Membrane Semantic Segmentation of Bacteria using U-Net
 
 ## Overview
