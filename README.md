@@ -27,5 +27,10 @@ The model generates high-fidelity traces using OpenCV contour detection:
 * **Blue Trace:** Predicted Inner Membrane
 
 > **Note:** These high-accuracy masks provide the foundation for downstream morphometric analysis, such as membrane thickness quantification (Proprietary/Patent-Pending).
->
-> python main.py --input data/test_set/
+
+## 🚀 Usage
+
+### 1. Installation
+Install all required dependencies using the following command:
+```bash
+pip install -r requirements.txt
