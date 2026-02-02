@@ -13,7 +13,7 @@ This repository focuses on the architectural implementation and training optimiz
 ## Performance Metrics
 The model was evaluated on a held-out test set using pixel-level metrics:
 
-| Metric | Combined Mean | Outer Membrane (OM) | Inner Membrane (IM) |
+| Metric | Combined | Outer Membrane (OM) | Inner Membrane (IM) |
 | :--- | :--- | :--- | :--- |
 | **Dice Coefficient** | 0.972 | 0.978 | 0.966 |
 | **Precision** | 0.975 | 0.981 | 0.969 |
@@ -47,6 +47,7 @@ To run the analysis on your own images without providing a ground truth JSON fil
 ```bash
 python main.py --input data
 ```
+
 
 
 
