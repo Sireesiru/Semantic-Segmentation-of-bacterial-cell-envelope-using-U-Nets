@@ -25,9 +25,11 @@ The model generates high-fidelity traces using OpenCV contour detection:
 * **Red Trace:** Predicted Outer Membrane
 * **Blue Trace:** Predicted Inner Membrane
 
+#### The model weight file (`best_unet_dice.pt`) is hosted under the [Releases](https://github.com/Sireesiru/Dual-Label-Semantic-Segmentation-for-Biological-Nanostructures-using-U-Nets/releases) page. Download it and place it inside the `model/` folder before running the scripts.
+
 > **Note:** These high-accuracy masks provide the foundation for downstream morphometric analysis, such as membrane thickness quantification (Proprietary/Patent-Pending).
 
-> **Note:** The model weight file (`best_unet_dice.pt`) is hosted under the [Releases](https://github.com/Sireesiru/Dual-Label-Semantic-Segmentation-for-Biological-Nanostructures-using-U-Nets/releases) page. Download it and place it inside the `model/` folder before running the scripts.
+
 
 ## Usage
 ### 1. Installation
@@ -45,6 +47,7 @@ To run the analysis on your own images without providing a ground truth JSON fil
 ```bash
 python main.py --input data
 ```
+
 
 
 
