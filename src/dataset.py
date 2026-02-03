@@ -66,23 +66,3 @@ class CocoBacteriaDataset(Dataset):
             mask = TF.affine(mask, angle=angle, translate=translations, scale=scale, shear=shear)
             
         return raw_image, raw_mask, image, mask
-
-
-#Data Loader-Load the train, Test and validation datasets
-
-train_annotation_file = "/home/cloud/old-volume/home/cloud/bacteria-thickness_additional.v4i.coco/train/_annotations.coco.json"
-train_image_dir = "/home/cloud/old-volume/home/cloud/bacteria-thickness_additional.v4i.coco/train"
-train_dataset = CocoBacteriaDataset(train_annotation_file, train_image_dir, transform=True)
-train_loader = DataLoader(train_dataset, batch_size=4, shuffle=True)
-
-
-valid_annotation_file = "/home/cloud/old-volume/home/cloud/bacteria-thickness_additional.v4i.coco/valid/_annotations.coco.json"
-valid_image_dir = "/home/cloud/old-volume/home/cloud/bacteria-thickness_additional.v4i.coco/valid"
-valid_dataset = CocoBacteriaDataset(valid_annotation_file, valid_image_dir, transform=True)
-valid_loader = DataLoader(valid_dataset, batch_size=4, shuffle=True)
-
-
-test_annotation_file = "/home/cloud/old-volume/home/cloud/bacteria-thickness_additional.v4i.coco/test/_annotations.coco.json"
-test_image_dir = "/home/cloud/old-volume/home/cloud/bacteria-thickness_additional.v4i.coco/test/"
-test_dataset = CocoBacteriaDataset(test_annotation_file, test_image_dir, transform=True)
-test_loader = DataLoader(test_dataset, batch_size=4, shuffle=False)
