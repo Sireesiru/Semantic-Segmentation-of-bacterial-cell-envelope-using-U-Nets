@@ -43,10 +43,11 @@ To process the images and verify the model against ground truth, run:
 python main.py --input data --coco_json data/_annotations.coco.json
 ```
 ## 3. How to run on new images (Inference Only)
-To run the analysis on your own images without providing a ground truth JSON file:
+To run the analysis on your own images without providing a ground truth. Images must be taken in 4096 x 4096nm resized to 640 x 640 
 ```bash
 python main.py --input data
 ```
+
 
 
 
