@@ -4,6 +4,11 @@
 This project implements a customized U-Net architecture designed to perform high-fidelity semantic segmentation of bacterial membranes from Electron Microscopy (EM) imagery. The model simultaneously segments the **Outer Membrane (OM)** and **Inner Membrane (IM)** as distinct labels, achieving a Dice Coefficient of **0.97**.
 This repository focuses on the architectural implementation and training optimization required to resolve nanometer-scale biological structures. Beyond segmentation, this tool includes a ML-based quantitative analysis pipeline that extracts nanometer-scale measurements (Area, Perimeter, and Periplasmic Space)
 
+## Datasets
+Dataset includes 403 images. 
+Resized to 640x640
+Split into 80:10:10 ratio
+
 ## Technical Implementation
 * **Architecture:** 5-level deep U-Net with skip connections to preserve spatial gradients during the decoding phase.
 * **Input/Output:** Grayscale input ($1 \times 640 \times 640$) with a multi-label output ($2 \times 640 \times 640$).
@@ -29,8 +34,6 @@ The model generates high-fidelity traces using OpenCV contour detection:
 
 > **Note:** These high-accuracy masks provide the foundation for downstream morphometric analysis, such as membrane thickness quantification (Proprietary/Patent-Pending).
 
-
-
 ## Usage
 ### 1. Installation
 Install all required dependencies using the following command:
@@ -47,6 +50,7 @@ To run the analysis on your own images without providing a ground truth. Images 
 ```bash
 python main.py --input data
 ```
+
 
 
 
